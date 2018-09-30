@@ -285,6 +285,616 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/Mukvin/Mukvin.github.io/2018/09/30/java基础面试题系列（2）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mukvin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/Yonna.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mukvin's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/30/java基础面试题系列（2）/" itemprop="url">java基础面试题系列（2）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-30T16:01:42+08:00">
+                2018-09-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/30/java基础面试题系列（2）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/09/30/java基础面试题系列（2）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/09/30/java基础面试题系列（2）/" class="leancloud_visitors" data-flag-title="java基础面试题系列（2）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>##前言<br>&emsp;&emsp;所有的总结都是为了复习，当然，也是作为了一种知识点的积累和回顾。  </p>
+<ol>
+<li>生成实例的对象的4种方法<br>1、关键字 new。工厂模式是对这种方式的包装；<br>2、类实现克隆接口，克隆一个实例。原型模式是一个应用实例；<br>3、用该类的加载器，newinstance。java的反射，反射使用实例：Spring的依赖注入、切面编程中动态代理；反射机制：得到一个对象所属的类；获得一个类所有成员变量好方法；在运行时创建对象；在运行时调用对象的方法。<br>4、sun.misc.Unsafe类，allocateInstance方法创建一个实例。（Java官方也不建议直接使用的Unsafe类，据说Oracle正在计划从Java 9中去掉Unsafe类）<br>5、实现序列化接口的类，通过IO流反序列化读取一个类，获得实例。     </li>
+<li>linux解压缩tar后的-zxvf中的zxvf分别代表的是什么意思？<br>z：通过gzip支持压缩或解压缩。还有其他的压缩或解压缩方式，比如j表示bzip2的方式。<br>x：解压缩。<br>c是压缩。<br>v：在压缩或解压缩过程中显示正在处理的文件名<br>f：f后面必须跟上要处理的文件名。也就是说你不能写成这样 tar -zxfv zhcon-0.2.5.tar.gz</li>
+<li>c语言方面的面试题，可能会被问到，最好做下准备！<ul>
+<li>虚函数<ul>
+<li>c++中虚函数是怎么实现的？</li>
+</ul>
+</li>
+<li>构造函数<ul>
+<li>构造函数可以是虚函数吗？</li>
+</ul>
+</li>
+<li>析构函数<ul>
+<li>在c++语言中，调用了析构函数，对象一定会被销毁。</li>
+<li>为什么鼓励将析构函数设计成虚函数？</li>
+</ul>
+</li>
+<li>拷贝构造函数</li>
+<li>c++的内存管理</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>深复制，浅复制的说明</p>
+<ul>
+<li>深复制：复制引用的对象（两种方式）  <pre><code>* 通过clone()  
+* 序列化  
+</code></pre></li>
+<li>浅复制</li>
+</ul>
+</li>
+<li><p>一套完整的测试应该由哪些阶段组成？  </p>
+<ol>
+<li><p>测试计划<br>　　首先，根据用户需求报告中关于功能要求和性能指标的规格说明书，定义相应的测试需求报告，即制订黑盒测试的最高标准，以后所有的测试工作都将围绕着测试需求来进行，符合测试需求的应用程序即是合格的，反之即是不合格的；同时，还要适当选择测试内容，合理安排测试人员、测试时间及测试资源等。</p>
+</li>
+<li><p>测试设计<br>　　将测试计划阶段制订的测试需求分解、细化为若干个可执行的测试过程，并为每个测试过程选择适当的测试用例（测试用例选择的好坏将直接影响到测试结果的有效性）。</p>
+</li>
+<li><p>测试开发<br>　　建立可重复使用的自动测试过程。</p>
+</li>
+<li><p>测试执行<br>　　执行测试开发阶段建立的自动测试过程，并对所发现的缺陷进行跟踪管理。测试执行一般由单元测试、组合测试、集成测试、系统联调及回归测试等步骤组成，测试人员应本着科学负责的态度，一步一个脚印地进行测试。</p>
+</li>
+<li><p>测试评估<br>　　结合量化的测试覆盖域及缺陷跟踪报告，对于应用软件的质量和开发团队的工作进度及工作效率进行综合评价。</p>
+</li>
+</ol>
+</li>
+<li><p><strong>java代码块初始化顺序</strong>：<br>父静态变量、父静态代码块、子静态变量，子静态代码块、父非静态变量、父类非静态代码块、父类构造函数，子类非静态变量、子类非静态变量、子类非静态代码块、子类构造函数。</p>
+</li>
+<li>面向对象的特征：抽象、多态、封装、继承</li>
+<li>this super的区别<pre><code>1. this：能区分成员变量和方法的形参，尤其是方法的形参和成员变量同名的时候，由this才能访问到成员变量。
+2. super能访问父类的方法和成员变量。
+</code></pre></li>
+<li>static关键字的作用？  <pre><code>1. 为某特定的数据类型或对象分配单一的存储空间，而不与创建对象个数无关。  
+2. 在不创建对象的情况下，可以通过类来直接调用方法或使用类的属性。  
+3. 只有使用4个地方：成员变量，成员方法，内部类，代码块！  
+4. 切记不能再成员函数内部定义static变量。  
+</code></pre></li>
+<li>switch，可用的参数是能隐式转换成int类型的数才行，也即“整形，字符串类型”，总结就有：short/byte/char/int/String(java 7之后支持)</li>
+<li>volatile有什么作用？  <pre><code>1. volatile是一个类型修饰符（type specifier） ，是被设计用来修饰被不同线程访问和修改的变量。  
+2. 被volatile类型定义的变量，系统每次用到它是，都是直接从对应的内存当中提取，而不会利用缓存。  
+3. 在使用了volatile修饰成员变量后，所有线程在任何时候说看到的变量的值都是相同的。  
+4. volatile不能保证操作的原子性，因此一般情况下，不能代替synchronized。  
+</code></pre></li>
+<li>instancof 是java语言的一个二元运算符<ul>
+<li>作用：用来判断一个引用类型的变量所指向的对象是否是一个类（或接口、抽象类、父类）的实例。</li>
+</ul>
+</li>
+<li>stictfp：strict float point，确保浮点数运算的准确性。</li>
+<li>java基本数据类型（8个）：byte,short,char,int,float,double,long,boolean.</li>
+<li>java的null值是什么？<ul>
+<li>null不是一个合法的object实例，所以编译器并没有为其分配内存，仅仅用于表明该引用目前没有指向任何对象。</li>
+</ul>
+</li>
+<li>理解赋值语句 String s = null ？<ul>
+<li>表示未申请任何内存资源，即些语句表示声明了一个引用变量并初始化引用,但是该引用没有指向任何对象.但可以把它作为参数传递或其它使用,但是不能调用它作为对象的方法</li>
+<li>(扩展)：<ul>
+<li>String s ;该语句表示只是声明了一个引用变量,但是并没有初始化引用,所以对变量s的任何操作(除了初始化赋值外) 都将引发异常.</li>
+<li>String s=””; 表示申请了内存资源，但资源空间值为空。该语句表示声明并引用到一个对象,只不过这个对象为0个字节.所以既然有了对象,就可以调用对象的方法<br>注意：”” 也是字符串</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>java语言，变量被分为两大类型：原始值（primitive）和引用值（reference）  </li>
+<li>Integer和int 的区别？  <pre><code>1. java语言中，变量分成两大类型，原始类型，和引用类型，int是java提供的原值数据类型，而Integer是java为int提供的封装类。  
+2. java为所有的原始数据类型提供了封装类。
+</code></pre></li>
+<li>不可变类：指当创建和这个类的实例之后，就不允许修改它的值了。  <pre><code>1. 所有基本类型的包装类（封装类）都是不可变类。  
+2. 不可变类中所有成员变量用private修饰  
+3. 类中没有修改和写成员变量的方法，比如setXXX，只有构造方法，一次生成，不在改变  
+4. 确保类中的所有方法不会被子类覆盖，要将类定义为final或类中方法定义为final  
+</code></pre></li>
+<li>原始数据类型的在传递参数是都是按值传递，包装类型在传递参数时是按引用传递。</li>
+<li>char型变量中能否可以存储一个中文汉字？<strong>可以</strong></li>
+<li>“==”，“equals()”,hashcode()区别？  <pre><code>1. 对于基本数据类型，使用“==”，可以直接比较对应值是否相等；对于引用类型，则是比较引用。  
+2. 不覆盖写equals，结果是和“==”一样比较引用。String类中的equal是比较两个值是否相同。  
+3. equals()是Object类提供的方法之一；hashcode（）方法时从Object类继承来的。  
+4. hashcode()使用用来鉴定两个对象是否相等。  
+5. equals()和hashcode()虽然都是比较对象是否相同，但是有区别。  
+</code></pre><ul>
+<li>equals()是给用户调用的，要比较对象是否相同，必须覆盖重写。  </li>
+<li>hashcode()用户一般不会去调用他，比如在hashmap中。由于key是不可以重复的（equals()和hashcode()一个不等就可以了），它在判断key是否重复时就是判断了hashcode()，而且也用到了equals()方法。并且两个返回值不一样，hashcode是int类型，equal是boolean类型。  </li>
+<li>一般覆盖重写equals()方法同时也是覆盖hashcode()</li>
+</ul>
+</li>
+<li>finally的return？  <pre><code>1. finally的代码在return前执行，  
+2. 如果try-finally和catch-finaly中都有return，那么finally块中的return语句将会覆盖别处的return语句  
+3. 最终返回到调用者那里的是finally中的return语句。  
+</code></pre></li>
+<li>字节流和字符流的主要区别？<pre><code>1. 字节流不会用到缓存，字符流用到了缓存。  
+2. 字节流以字节（8bit）为单位，包含两个抽象类：InputStrea，OutputStream  
+3. 字符流以字符（16bit）为单位，包含两个抽象类：Reader，Writer  
+</code></pre></li>
+<li><p>数据库常用端口号<br> |数据库|MySql|Oracle|SqlServer|MongoDB|<br> |—–:|:—-:|:—–:|:——:|:——-|<br> | 端口号|  3306 |  1521 |  1433 |  27017 |</p>
+</li>
+<li><p>什么是序列化？  </p>
+<pre><code>* 序列化是一种将对象以一连串的字节描述的过程，用于解决在对对象流进行读写操作时所引发的问题。  
+* 序列化可以将对象的状态写在流里进行网络传输，或者保存到文件，数据库等系统里，并在需要的时候把该流读取出来重新构造一个相同的对象。（反序列化）  
+* 序列化可以实现深复制，即可以复制引用的对象。  
+</code></pre></li>
+<li><p>JVM加载class文件的原理机制是什么？  </p>
+<ol>
+<li>类加载主要分成三步：  <ul>
+<li>装载  </li>
+<li>链接  <ol>
+<li>检查  </li>
+<li>准备  </li>
+<li>解析    </li>
+</ol>
+</li>
+<li>初始化  </li>
+</ul>
+</li>
+<li>加载是有类加载器，具体是由ClassLoader和它的子类来实现；类加载器本身也是一个类，其实质就是把类文件从硬盘读取到内存中。  </li>
+<li>类加载方式分为显式和隐式加载：<pre><code>* 隐式加载：程序使用new等方式创建对象，会隐式地调用类的加载器把对应的类加载到jvm中。
+* 显式加载指的是通过直接调用class.forName（）方法把所需的类加载到jvm中。
+</code></pre></li>
+<li><p>java中的类分成3种：系统类、扩展类、和自定义类。对应不同类的加载有3种不同的类加载器：</p>
+<pre><code>* Bootstrap Loader -负责加载系统类（jre/lib/rt.jar的类）
+
+    *         |
+
+        * --ExtClassLoader -负责加载扩展类（jar/lib/ext/*.jar）
+
+            *        |
+
+                * --AppClassLoader -负责加载应用类（classpath指定的目录或jar中的类）
+* Bootstrap Loader 是C++语言实现的，java语言中是看不见的。
+</code></pre></li>
+</ol>
+</li>
+<li>什么是GC？  <ol>
+<li>垃圾回收（garbager collection ，GC）主要完成3项任务  <ul>
+<li>分配内存  </li>
+<li>确保被引用对象的内存不被错误的回收  </li>
+<li>回收不再被引用的对象的内存空间！   </li>
+</ul>
+</li>
+<li>垃圾回收算法  <ul>
+<li>引用计数算法（jvm不用，因为不能解决相互引用的问题）  </li>
+<li>追踪回收算法  </li>
+<li>压缩回收  </li>
+<li>复制回收  </li>
+<li>按代回收  </li>
+</ul>
+</li>
+<li>system.gc（）的相关  <pre><code>1. 开发人员是不能实时地调用垃圾回收期对某个对象或所有对象进行垃圾回收。，但是开发人员却可以通过调用System.gc（）的方法去“通知”垃圾回收器运行，当然，jvm也并不能会保证垃圾回收器马上就会运行。  
+2. System.gc()方法执行会停止所有响应，去检查内存中是否有可以回收的对象，这会对程序的正常运行以及性能造成极大的威胁，因此实际编程时，不推荐频繁使用这一方法。  
+</code></pre></li>
+</ol>
+</li>
+<li>内存泄露？  <pre><code>1. 内存泄露是指的一个不再被程序使用的对象或变量还在内存中占有存储空间（java中主要指的就是这种情况）。  
+2. 引起内存泄露的原因：  
+    1. 静态集合类。比如hashmap和vector容器是静态的，生命周期是和程序一致，容器中的对象在程序结束之前将不能被释放，从而造成了内存泄露。  
+    2. 各种连接  
+    3. 监听器  
+    4. 变量不合理的作用域  
+    5. 单例模式可能会造成内存泄露  
+</code></pre></li>
+<li>java中栈和堆的区别？  <ol>
+<li>java语言中的堆和栈都是内存中存放数据的地方。</li>
+<li>变量分为基本数据类型和引用类型  <ul>
+<li>基本数据类型和以及对象的引用变量，内存分配在栈上。  </li>
+<li>引用类型的变量，内存是分配在堆上或常量池中，需要通过new等方式创建。  </li>
+</ul>
+</li>
+<li>堆内存是用来存放运行时创建的对象，一般来说，通过new关键字创建出来的对象都是存放在堆内存上</li>
+<li>jvm是基于堆栈的虚拟机，每个java程序运行在一个单独的jvm实例上，每一个实例唯一对应一个堆，一个java程序内的多个线程也运行在同一个jvm实例上，因此这些线程会共享堆内存  </li>
+<li>栈和堆的功能以及作用来比较：堆主要存放对象，栈主要用来执行程序  <ul>
+<li>栈的存取速度快，但是栈的大小和生存期必须确定，缺乏一定的灵活性</li>
+<li>堆可以在运行时动态分配内存，生存期不用提前告诉编译器，也导致了存取速度比较缓慢。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/Mukvin/Mukvin.github.io/2018/09/30/java基础面试题系列（1）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mukvin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/Yonna.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mukvin's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/30/java基础面试题系列（1）/" itemprop="url">java基础面试题系列（1）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-30T16:00:00+08:00">
+                2018-09-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/09/30/java基础面试题系列（1）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/09/30/java基础面试题系列（1）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/09/30/java基础面试题系列（1）/" class="leancloud_visitors" data-flag-title="java基础面试题系列（1）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li><p>并行和并发的区别</p>
+<pre><code>* 并发可以是虚拟的同时执行，也可以是真的同时执行。
+* 并行的意思是真的同时执行。
+* 结论是：并行是我们物理时空观下的同时执行，而并发则是操作系统用线程这个模型抽象之后站在线程的视角上看到的“同时”执行。
+</code></pre></li>
+<li><p>谈谈final, finally, finalize的区别。</p>
+<pre><code>* final 用于声明属性，方法和类，分别表示属性不可变，方法不可覆盖，类不可继承。
+* finally是异常处理语句结构的一部分，表示总是执行。
+* finalize是Object类的一个方法，在垃圾收集器执行的时候会调用被回收对象的此方法，可以覆盖此方法提供垃圾收集时的其他资源回收，例如关闭文件等。
+</code></pre></li>
+<li><p>Anonymous Inner Class (匿名内部类) 是否可以extends(继承)其它类，是否可以implements(实现)interface(接口)?</p>
+<pre><code>* 可以继承其他类或完成其他接口，在swing编程中常用此方式。
+</code></pre></li>
+<li><p>Static Nested Class 和 Inner Class的不同，说得越多越好(面试题有的很笼统)。</p>
+<pre><code>* Static Nested Class是被声明为静态（static）的内部类，它可以不依赖于外部类实例被实例化。而通常的内部类需要在外部类实例化后才能实例化。    5. &amp;和&amp;&amp;的区别。
+
+* &amp;是位运算符，表示按位与运算，&amp;&amp;是逻辑运算符，表示逻辑与（and）.
+</code></pre></li>
+<li><p>HashMap和Hashtable的区别。</p>
+<pre><code>* HashMap是Hashtable的轻量级实现（非线程安全的实现），他们都完成了Map接口，主要区别在于HashMap允许空（null）键值（key）,由于非线程安全，效率上可能高于Hashtable.
+</code></pre></li>
+<li><p>Collection 和 Collections的区别。</p>
+<pre><code>1. Collection是集合类的上级接口，继承与他的接口主要有Set 和List.
+2. Collections是针对集合类的一个包装类，他提供一系列静态方法实现对各种集合的搜索、排序、线程安全化等操作。其中大多数方法都是用来处理线性表。
+3. collections类不能实例化，如同一个工具类。
+</code></pre></li>
+<li><p>什么时候用assert。</p>
+<pre><code>1. 1.4新增关键字（语法），用于测试boolean表达式状态，可用于调试程序。
+2. 使用方法 assert &lt;boolean表达式&gt;，表示如果表达式为真（true）,则下面的语句执行，否则抛出AssertionError。
+3. 另外的使用方式assert &lt; boolean表达式&gt;:&lt;other表达式&gt;，表示如果表达式为真，后面的表达式忽略，否则后面表达式的值用于AssertionError的构建参数。
+4. 注意编译时要增加-source 1.4 参数，否则报错。运行时要增加 –ea参数，否则assert行被忽略
+</code></pre></li>
+<li><p>GC是什么? 为什么要有GC?</p>
+<pre><code>*GC是垃圾收集的意思（Gabage Collection）,内存处理是编程人员容易出现问题的地方，忘记或者错误的内存回收会导致程序或系统的不稳定甚至崩溃，Java提供的GC功能可以自动监测对象是否超过作用域从而达到自动回收内存的目的。
+</code></pre></li>
+<li><p>String s = new String(“xyz”);创建了几个String Object?</p>
+<pre><code>* 两个
+</code></pre></li>
+<li><p>Math.round(11.5)等於多少? Math.round(-11.5)等於多少?</p>
+<pre><code>1. Math.round(11.5)==12
+2. Math.round(-11.5)==-11
+3. round方法返回与参数最接近的长整数，参数加1/2后求其floor.
+</code></pre></li>
+<li><p>short s1 = 1; s1 = s1 + 1;有什么错? short s1 = 1; s1 += 1;有什么错?</p>
+<pre><code>1. short s1 = 1; s1 = s1 + 1; （s1+1运算结果是int型，需要强制转换类型）
+2. short s1 = 1; s1 += 1;（可以正确编译）
+</code></pre></li>
+<li><p>sleep() 和 wait() 有什么区别?</p>
+<pre><code>1. sleep是线程类（Thread）的方法，导致此线程暂停执行指定时间，给执行机会给其他线程，但是监控状态依然保持，到时后会自动恢复。调用sleep不会释放对象锁。
+2. wait是Object类的方法，对此对象调用wait方法导致本线程放弃对象锁，进入等待此对象的等待锁定池，只有针对此对象发出notify方法（或notifyAll）后本线程才进入对象锁定池准备获得对象锁进入运行状态。
+</code></pre></li>
+<li><p>Overload和Override的区别。Overloaded的方法是否可以改变返回值的类型?</p>
+<pre><code>1. 方法的重写Overriding和重载Overloading是Java多态性的不同表现。
+2. 重写Overriding是父类与子类之间多态性的一种表现，重载Overloading是一个类中多态性的一种表现。
+3. 如果在子类中定义某方法与其父类有相同的名称和参数，我们说该方法被重写 (Overriding)。子类的对象使用这个方法时，将调用子类中的定义，对它而言，父类中的定义如同被“屏蔽”了。
+4. 如果在一个类中定义了多个同名的方法，它们或有不同的参数个数或有不同的参数类型，则称为方法的重载(Overloading)。
+5. Overloaded的方法是可以改变返回值的类型。
+</code></pre></li>
+<li><p>Set里的元素是不能重复的，那么用什么方法来区分重复与否呢? 是用==还是equals()? 它们有何区别?</p>
+<pre><code>1. Set里的元素是不能重复的，那么用iterator()方法来区分重复与否。equals()是判读两个Set是否相等。
+2. equals()和==方法决定引用值是否指向同一对象，equals()在类中被覆盖，为的是当两个分离的对象的内容和类型相配的话，返回真值。
+</code></pre></li>
+<li><p>给一个最常见到的runtime exception。</p>
+<pre><code>1. ArithmeticException, ArrayStoreException, BufferOverflowException,  BufferUnderflowException, CannotRedoException, CannotUndoException, ClassCastException,  CMMException, ConcurrentModificationException, DOMException, EmptyStackException,  IllegalArgumentException, IllegalMonitorStateException, IllegalPathStateException,  IllegalStateException,
+2. ImagingOpException, IndexOutOfBoundsException, MissingResourceException,  NegativeArraySizeException, NoSuchElementException, NullPointerException,  ProfileDataException, ProviderException, RasterFormatException, SecurityException,  SystemException, UndeclaredThrowableException, UnmodifiableSetException,  UnsupportedOperationException
+</code></pre></li>
+<li><p>error和exception有什么区别?</p>
+<pre><code>1. error 表示恢复不是不可能但很困难的情况下的一种严重问题。比如说内存溢出。不可能指望程序能处理这样的情况。
+2. exception 表示一种设计或实现问题。也就是说，它表示如果程序运行正常，从不会发生的情况。
+</code></pre></li>
+<li><p>abstract class和interface有什么区别?</p>
+<pre><code>1. 声明方法的存在而不去实现它的类被叫做抽象类（abstract class），它用于要创建一个体现某些基本行为的类，并为该类声明方法，但不能在该类中实现该类的情况。
+2. 不能创建abstract 类的实例。然而可以创建一个变量，其类型是一个抽象类，并让它指向具体子类的一个实例。不能有抽象构造函数或抽象静态方法。Abstract 类的子类为它们父类中的所有抽象方法提供实现，否则它们也是抽象类为。取而代之，在子类中实现该方法。知道其行为的其它类可以在类中实现这些方法。
+3. 接口（interface）是抽象类的变体。在接口中，所有方法都是抽象的。多继承性可通过实现这样的接口而获得。接口中的所有方法都是抽象的，没有一个有程序体。接口只可以定义static final成员变量。接口的实现与子类相似，除了该实现类不能从接口定义中继承行为。当类实现特殊接口时，它定义（即将程序体给予）所有这种接口的方法。然后，它可以在实现了该接口的类的任何对象上调用接口的方法。由于有抽象类，它允许使用接口名作为引用变量的类型。引用可以转换到接口类型或从接口类型转换，instanceof 运算符可以用来决定某对象的类是否实现了接口。
+</code></pre></li>
+<li><p>abstract的method是否可同时是static,是否可同时是native，是否可同时是synchronized?</p>
+<pre><code>* 都不能
+</code></pre></li>
+<li><p>接口是否可继承接口? 抽象类是否可实现(implements)接口? 抽象类是否可继承实体类(concrete class)?</p>
+<pre><code>1. 接口可以继承接口。抽象类可以实现(implements)接口，抽象类是否可继承实体类，但前提是实体类必须有明确的构造函数。
+</code></pre></li>
+<li><p>启动一个线程是用run()还是start()?</p>
+<pre><code>1. 启动一个线程是调用start()方法，使线程所代表的虚拟处理机处于可运行状态，这意味着它可以由JVM调度并执行。这并不意味着线程就会立即运行。
+2. run()方法可以产生必须退出的标志来停止一个线程。
+</code></pre></li>
+<li><p>构造器Constructor是否可被override?</p>
+<pre><code>1. 构造器Constructor不能被继承，因此不能重写Overriding，但可以被重载Overloading。
+</code></pre></li>
+<li><p>try {}里有一个return语句，那么紧跟在这个try后的finally {}里的code会不会被执行，什么时候被执行，在return前还是后?</p>
+<pre><code>1. 会执行，在return前执行。
+</code></pre></li>
+<li><p>当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递?</p>
+<pre><code>1. 是值传递。Java 编程语言只由值传递参数。当一个对象实例作为一个参数被传递到方法中时，参数的值就是对该对象的引用。对象的内容可以在被调用的方法中改变，但对象的引用是永远不会改变的。
+</code></pre></li>
+<li><p>switch是否能作用在byte上，是否能作用在long上，是否能作用在String上?</p>
+<pre><code>1. switch（expr1）中，expr1是一个整数表达式。因此传递给 switch 和 case 语句的参数应该是 int、 short、 char 或者 byte，string（java7之后）。 float，double，long, 都不能作用于swtich。
+</code></pre></li>
+<li><p>string 、stringBuilder StringBuffer StringTokenizer区别</p>
+<pre><code>1. String类是不可变类，任何对String的改变都 会引发新的String对象的生成；StringBuffer则是可变类，任何对它所指代的字符串的改变都不会产生新的对象。
+2. StringBuffer支持并发操作，线性安全的，适合多线程中使用。
+3. StringBuilder不支持并发操作，线性不安全的，不适合多线程中使用。新引入的StringBuilder类不是线程安全的，但其在单线程中的性能比 StringBuffer高。
+4. 三者在执行速度方面的比较：StringBuilder &gt;  StringBuffer  &gt;  String
+5. StringTokenizer是用来分割字符串的工具类
+</code></pre></li>
+<li><p>Iterator与ListIterator的区别？</p>
+<pre><code>1. Iterator只能是正向遍历集合，适用于获取，移除元素。
+2. ListIterator继承自Iterator，专门针对List，可以从两个方向来遍历List，同时支持元素的修改。
+</code></pre></li>
+<li><p>ArrayList、Vector、LinkedList有什么区别？</p>
+<pre><code>1. 相同点：
+
+    * 三个类均在java.util包中，均为可伸缩数组，即可以动态改变长度的数组。
+    * 其中ArrayList和Vector都是基于存储元素的Object[] array来实现，会在内存中开辟一块连续的空间来存储，所以索引速度快，但是插入执行就比较慢。
+2. 不同点：
+
+    * LinkedList的存储空间就不是连续的
+    * 扩充的时候，Vector默认扩充原来2倍，，而且每次扩充大小可以设置
+    * ArrayList默认是扩展为原来的1.5倍，且没有提供方法设置空间扩展
+    * ArrayList与Vector最大的区别就是同步使用，
+
+        * Vector线性安全，ArrayList线程不安全
+    * LinkedList也是线程不安全的
+</code></pre></li>
+<li><p>Treemap、WeakhashMap有什么区别？</p>
+<pre><code>1. WeakhashMap与hashmap类似，而这不同之处在于WeakhashMap使用的key采用的是弱引用，只要WeakhashMap不再被外部引用，就可以了被垃圾回收器回收。
+2. hashmap的可以则是强引用，只有key被删除了之后，才能被垃圾回收器回收。
+</code></pre></li>
+<li><p>实现hashmap的安全同步？</p>
+<pre><code>1. HashMap可以通过Map m =Collection.synchronizedMap(new hashMap())来达到同步的效果。
+2. 具体而言，该方法返回了一个同步的Map，该Map封装了底层的HashMao的所有方法，使得底层的HashMap及时在多线程的环境中也是安全的。
+</code></pre></li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/Mukvin/Mukvin.github.io/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -468,7 +1078,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

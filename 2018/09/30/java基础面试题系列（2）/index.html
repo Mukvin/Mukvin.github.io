@@ -77,26 +77,18 @@
 
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;GET和POST是HTTP请求的两种基本方法，要说它们的区别，接触过WEB开发的人都能说出一二。&amp;emsp;&amp;emsp;最直观的区别就是GET把参数包含在URL中，POST通过request body传递参数。&amp;emsp;&amp;emsp;你可能自己写过无数个GET和POST请求，或者已经看过很多权威网站总结出的他们的区别，你非常清楚知道什么时候该用什么。">
+<meta name="description" content="##前言&amp;emsp;&amp;emsp;所有的总结都是为了复习，当然，也是作为了一种知识点的积累和回顾。    生成实例的对象的4种方法1、关键字 new。工厂模式是对这种方式的包装；2、类实现克隆接口，克隆一个实例。原型模式是一个应用实例；3、用该类的加载器，newinstance。java的反射，反射使用实例：Spring的依赖注入、切面编程中动态代理；反射机制：得到一个对象所属的类；获得一个类所有成">
 <meta name="keywords" content="study,Basic,interview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaWeb开发面试题系列（1）-HTTP中GET与POST的区别">
-<meta property="og:url" content="https://github.com/Mukvin/Mukvin.github.io/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/index.html">
+<meta property="og:title" content="java基础面试题系列（2）">
+<meta property="og:url" content="https://github.com/Mukvin/Mukvin.github.io/2018/09/30/java基础面试题系列（2）/index.html">
 <meta property="og:site_name" content="Mukvin&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;GET和POST是HTTP请求的两种基本方法，要说它们的区别，接触过WEB开发的人都能说出一二。&amp;emsp;&amp;emsp;最直观的区别就是GET把参数包含在URL中，POST通过request body传递参数。&amp;emsp;&amp;emsp;你可能自己写过无数个GET和POST请求，或者已经看过很多权威网站总结出的他们的区别，你非常清楚知道什么时候该用什么。">
+<meta property="og:description" content="##前言&amp;emsp;&amp;emsp;所有的总结都是为了复习，当然，也是作为了一种知识点的积累和回顾。    生成实例的对象的4种方法1、关键字 new。工厂模式是对这种方式的包装；2、类实现克隆接口，克隆一个实例。原型模式是一个应用实例；3、用该类的加载器，newinstance。java的反射，反射使用实例：Spring的依赖注入、切面编程中动态代理；反射机制：得到一个对象所属的类；获得一个类所有成">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/1.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/2.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/3.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/5.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/6.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/8.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/9.png">
-<meta property="og:updated_time" content="2018-09-30T07:42:57.859Z">
+<meta property="og:updated_time" content="2018-09-30T08:35:55.624Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaWeb开发面试题系列（1）-HTTP中GET与POST的区别">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;GET和POST是HTTP请求的两种基本方法，要说它们的区别，接触过WEB开发的人都能说出一二。&amp;emsp;&amp;emsp;最直观的区别就是GET把参数包含在URL中，POST通过request body传递参数。&amp;emsp;&amp;emsp;你可能自己写过无数个GET和POST请求，或者已经看过很多权威网站总结出的他们的区别，你非常清楚知道什么时候该用什么。">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/1.png">
+<meta name="twitter:title" content="java基础面试题系列（2）">
+<meta name="twitter:description" content="##前言&amp;emsp;&amp;emsp;所有的总结都是为了复习，当然，也是作为了一种知识点的积累和回顾。    生成实例的对象的4种方法1、关键字 new。工厂模式是对这种方式的包装；2、类实现克隆接口，克隆一个实例。原型模式是一个应用实例；3、用该类的加载器，newinstance。java的反射，反射使用实例：Spring的依赖注入、切面编程中动态代理；反射机制：得到一个对象所属的类；获得一个类所有成">
 
 
 
@@ -126,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/Mukvin/Mukvin.github.io/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/"/>
+  <link rel="canonical" href="https://github.com/Mukvin/Mukvin.github.io/2018/09/30/java基础面试题系列（2）/"/>
 
 
 
 
 
-  <title>JavaWeb开发面试题系列（1）-HTTP中GET与POST的区别 | Mukvin's Blog</title>
+  <title>java基础面试题系列（2） | Mukvin's Blog</title>
   
 
 
@@ -293,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Mukvin/Mukvin.github.io/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/Mukvin/Mukvin.github.io/2018/09/30/java基础面试题系列（2）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mukvin">
@@ -310,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaWeb开发面试题系列（1）-HTTP中GET与POST的区别</h1>
+          <h1 class="post-title" itemprop="name headline">java基础面试题系列（2）</h1>
         
 
         <div class="post-meta">
@@ -322,7 +314,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-30T15:19:30+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-30T16:01:42+08:00">
                 2018-09-30
               </time>
             
@@ -341,9 +333,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/#comments" itemprop="discussionUrl">
+                <a href="/2018/09/30/java基础面试题系列（2）/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/09/30/java基础面试题系列（2）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -351,7 +343,7 @@
 
           
           
-             <span id="/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/" class="leancloud_visitors" data-flag-title="JavaWeb开发面试题系列（1）-HTTP中GET与POST的区别">
+             <span id="/2018/09/30/java基础面试题系列（2）/" class="leancloud_visitors" data-flag-title="java基础面试题系列（2）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -382,22 +374,201 @@
       
 
       
-        <p>&emsp;&emsp;GET和POST是HTTP请求的两种基本方法，要说它们的区别，接触过WEB开发的人都能说出一二。<br><br>&emsp;&emsp;最直观的区别就是GET把参数包含在URL中，POST通过request body传递参数。<br>&emsp;&emsp;你可能自己写过无数个GET和POST请求，或者已经看过很多权威网站总结出的他们的区别，你非常清楚知道什么时候该用什么。<br><br><a id="more"></a></p>
-<div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/1.png"><br></div><br>&emsp;&emsp;可以你轻轻松松的给出了一个“标准答案”：<br><br>1. GET在浏览器回退时是无害的，而POST会再次提交请求。<br>1. GET产生的URL地址可以被Bookmark，而POST不可以。<br>1. GET请求会被浏览器主动cache，而POST不会，除非手动设置。<br>1. GET请求只能进行url编码，而POST支持多种编码方式。<br>1. GET请求在URL中传送的参数是有长度限制的，而POST没有。<br>1. 对参数的数据类型，GET只接受ASCII字符，而POST没有限制。<br>1. GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。<br>1. GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。<br>1. GET参数通过URL传递，POST放在Request body中。<br><br>- （本标准答案参考自w3schools）<br><br>“很遗憾，这不是我们要的回答！”<br><br><div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/2.png"><br></div><br>&emsp;&emsp;请告诉我真相。。。<br><br>&emsp;&emsp;如果我告诉你GET和POST本质上没有区别你信吗？<br><br>&emsp;&emsp;让我们扒下GET和POST的外衣，坦诚相见吧！<br><div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/3.png"><br></div><br>&emsp;&emsp;GET和POST是什么？<br><br>&emsp;&emsp;HTTP协议中的两种发送请求的方法。<br>&emsp;&emsp;HTTP是什么？<br><br>&emsp;&emsp;HTTP是基于TCP/IP的关于数据如何在万维网中如何通信的协议。<br>&emsp;&emsp;HTTP的底层是TCP/IP。所以GET和POST的底层也是TCP/IP，也就是说，GET/POST都是TCP链接。GET和POST能做的事情是一样一样的。你要给GET加上request body，给POST带上url参数，技术上是完全行的通的。<br><br>&emsp;&emsp;那么，“标准答案”里的那些区别是怎么回事？<br><div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/5.png"><br></div><br><p><br>&emsp;&emsp;在我大万维网世界中，TCP就像汽车，我们用TCP来运输数据，它很可靠，从来不会发生丢件少件的现象。但是如果路上跑的全是看起来一模一样的汽车，那这个世界看起来是一团混乱，送急件的汽车可能被前面满载货物的汽车拦堵在路上，整个交通系统一定会瘫痪。为了避免这种情况发生，交通规则HTTP诞生了。<br></p><br><p><br>&emsp;&emsp;HTTP给汽车运输设定了好几个服务类别，有GET, POST, PUT, DELETE等等，HTTP规定，当执行GET请求的时候，要给汽车贴上GET的标签（设置method为GET），而且要求把传送的数据放在车顶上（url中）以方便记录。如果是POST请求，就要在车上贴上POST的标签，并把货物放在车厢里。当然，你也可以在GET的时候往车厢内偷偷藏点货物，但是这是很不光彩；也可以在POST的时候在车顶上也放一些数据，让人觉得傻乎乎的。<br></p><br>&emsp;&emsp;HTTP只是个行为准则，而TCP才是GET和POST怎么实现的基本。但是，我们只看到HTTP对GET和POST参数的传送渠道（url还是requrest body）提出了要求。<br><br>&emsp;&emsp;<strong>“标准答案”里关于参数大小的限制又是从哪来的呢？</strong><br><div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/6.png"><br></div>   
-
-<p>&emsp;&emsp;在我大万维网世界中，还有另一个重要的角色：<strong>运输公司</strong>。<br>&emsp;&emsp;<strong>不同的浏览器（发起http请求）和服务器（接受http请求）就是不同的运输公司。</strong> 虽然理论上，你可以在车顶上无限的堆货物（url中无限加参数）。但是运输公司可不傻，装货和卸货也是有很大成本的，他们会限制单次运输量来控制风险，数据量太大对浏览器和服务器都是很大负担。<br>&emsp;&emsp;业界不成文的规定是，（大多数）浏览器通常都会限制url长度在2K个字节，而（大多数）服务器最多处理64K大小的url。超过的部分，恕不处理。<br>&emsp;&emsp;如果你用GET服务，在request body偷偷藏了数据，不同服务器的处理方式也是不同的，有些服务器会帮你卸货，读出数据，有些服务器直接忽略，所以，虽然GET可以带request body，也不能保证一定能被接收到哦。<br>&emsp;&emsp;好了，现在你知道，GET和POST本质上就是TCP链接，并无差别。但是由于HTTP的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同。<br>&emsp;&emsp;你以为本文就这么结束了？  </p>
-<div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/8.png"><br></div>  
-
-<p>&emsp;&emsp;<strong>我们的大BOSS还等着出场呢。。。</strong><br>&emsp;&emsp;这位BOSS有多神秘？当你试图在网上找“GET和POST的区别”的时候，那些你会看到的搜索结果里，从没有提到他。<br>&emsp;&emsp;他究竟是什么呢。。。<br>&emsp;&emsp;GET和POST还有一个<strong>重大区别</strong>，  </p>
-<p>&emsp;&emsp;<em>简单的说：<strong>GET产生一个TCP数据包；POST产生两个TCP数据包</strong>。<br>&emsp;&emsp;长的说：对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。</em>   </p>
-<p>&emsp;&emsp;也就是说，GET只需要汽车跑一趟就把货送到了，而POST得跑两趟，第一趟，先去和服务器打个招呼“嗨，我等下要送一批货来，你们打开门迎接我”，然后再回头把货送过去。因为POST需要两步，时间上消耗的要多一点，看起来GET比POST更有效。<br>&emsp;&emsp;因此Yahoo团队有推荐用GET替换POST来优化网站性能。但这是一个坑！跳入需谨慎。<br>&emsp;&emsp;<strong>为什么？</strong>  </p>
+        <p>##前言<br>&emsp;&emsp;所有的总结都是为了复习，当然，也是作为了一种知识点的积累和回顾。  </p>
 <ol>
-<li>GET与POST都有自己的语义，不能随便混用。  </li>
-<li>据研究，在网络环境好的情况下，发一次包的时间和发两次包的时间差别基本可以无视。而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点。  </li>
-<li>并不是所有浏览器都会在POST中发送两次包，Firefox就只发送一次。    </li>
+<li>生成实例的对象的4种方法<br>1、关键字 new。工厂模式是对这种方式的包装；<br>2、类实现克隆接口，克隆一个实例。原型模式是一个应用实例；<br>3、用该类的加载器，newinstance。java的反射，反射使用实例：Spring的依赖注入、切面编程中动态代理；反射机制：得到一个对象所属的类；获得一个类所有成员变量好方法；在运行时创建对象；在运行时调用对象的方法。<br>4、sun.misc.Unsafe类，allocateInstance方法创建一个实例。（Java官方也不建议直接使用的Unsafe类，据说Oracle正在计划从Java 9中去掉Unsafe类）<br>5、实现序列化接口的类，通过IO流反序列化读取一个类，获得实例。     </li>
+<li>linux解压缩tar后的-zxvf中的zxvf分别代表的是什么意思？<br>z：通过gzip支持压缩或解压缩。还有其他的压缩或解压缩方式，比如j表示bzip2的方式。<br>x：解压缩。<br>c是压缩。<br>v：在压缩或解压缩过程中显示正在处理的文件名<br>f：f后面必须跟上要处理的文件名。也就是说你不能写成这样 tar -zxfv zhcon-0.2.5.tar.gz</li>
+<li>c语言方面的面试题，可能会被问到，最好做下准备！<ul>
+<li>虚函数<ul>
+<li>c++中虚函数是怎么实现的？</li>
+</ul>
+</li>
+<li>构造函数<ul>
+<li>构造函数可以是虚函数吗？</li>
+</ul>
+</li>
+<li>析构函数<ul>
+<li>在c++语言中，调用了析构函数，对象一定会被销毁。</li>
+<li>为什么鼓励将析构函数设计成虚函数？</li>
+</ul>
+</li>
+<li>拷贝构造函数</li>
+<li>c++的内存管理</li>
+</ul>
+</li>
 </ol>
-<p>&emsp;&emsp;现在，当面试官再问你“GET与POST的区别”的时候，你的内心是不是这样的？</p>
-<div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/9.png"><br></div>
+<ol>
+<li><p>深复制，浅复制的说明</p>
+<ul>
+<li>深复制：复制引用的对象（两种方式）  <pre><code>* 通过clone()  
+* 序列化  
+</code></pre></li>
+<li>浅复制</li>
+</ul>
+</li>
+<li><p>一套完整的测试应该由哪些阶段组成？  </p>
+<ol>
+<li><p>测试计划<br>　　首先，根据用户需求报告中关于功能要求和性能指标的规格说明书，定义相应的测试需求报告，即制订黑盒测试的最高标准，以后所有的测试工作都将围绕着测试需求来进行，符合测试需求的应用程序即是合格的，反之即是不合格的；同时，还要适当选择测试内容，合理安排测试人员、测试时间及测试资源等。</p>
+</li>
+<li><p>测试设计<br>　　将测试计划阶段制订的测试需求分解、细化为若干个可执行的测试过程，并为每个测试过程选择适当的测试用例（测试用例选择的好坏将直接影响到测试结果的有效性）。</p>
+</li>
+<li><p>测试开发<br>　　建立可重复使用的自动测试过程。</p>
+</li>
+<li><p>测试执行<br>　　执行测试开发阶段建立的自动测试过程，并对所发现的缺陷进行跟踪管理。测试执行一般由单元测试、组合测试、集成测试、系统联调及回归测试等步骤组成，测试人员应本着科学负责的态度，一步一个脚印地进行测试。</p>
+</li>
+<li><p>测试评估<br>　　结合量化的测试覆盖域及缺陷跟踪报告，对于应用软件的质量和开发团队的工作进度及工作效率进行综合评价。</p>
+</li>
+</ol>
+</li>
+<li><p><strong>java代码块初始化顺序</strong>：<br>父静态变量、父静态代码块、子静态变量，子静态代码块、父非静态变量、父类非静态代码块、父类构造函数，子类非静态变量、子类非静态变量、子类非静态代码块、子类构造函数。</p>
+</li>
+<li>面向对象的特征：抽象、多态、封装、继承</li>
+<li>this super的区别<pre><code>1. this：能区分成员变量和方法的形参，尤其是方法的形参和成员变量同名的时候，由this才能访问到成员变量。
+2. super能访问父类的方法和成员变量。
+</code></pre></li>
+<li>static关键字的作用？  <pre><code>1. 为某特定的数据类型或对象分配单一的存储空间，而不与创建对象个数无关。  
+2. 在不创建对象的情况下，可以通过类来直接调用方法或使用类的属性。  
+3. 只有使用4个地方：成员变量，成员方法，内部类，代码块！  
+4. 切记不能再成员函数内部定义static变量。  
+</code></pre></li>
+<li>switch，可用的参数是能隐式转换成int类型的数才行，也即“整形，字符串类型”，总结就有：short/byte/char/int/String(java 7之后支持)</li>
+<li>volatile有什么作用？  <pre><code>1. volatile是一个类型修饰符（type specifier） ，是被设计用来修饰被不同线程访问和修改的变量。  
+2. 被volatile类型定义的变量，系统每次用到它是，都是直接从对应的内存当中提取，而不会利用缓存。  
+3. 在使用了volatile修饰成员变量后，所有线程在任何时候说看到的变量的值都是相同的。  
+4. volatile不能保证操作的原子性，因此一般情况下，不能代替synchronized。  
+</code></pre></li>
+<li>instancof 是java语言的一个二元运算符<ul>
+<li>作用：用来判断一个引用类型的变量所指向的对象是否是一个类（或接口、抽象类、父类）的实例。</li>
+</ul>
+</li>
+<li>stictfp：strict float point，确保浮点数运算的准确性。</li>
+<li>java基本数据类型（8个）：byte,short,char,int,float,double,long,boolean.</li>
+<li>java的null值是什么？<ul>
+<li>null不是一个合法的object实例，所以编译器并没有为其分配内存，仅仅用于表明该引用目前没有指向任何对象。</li>
+</ul>
+</li>
+<li>理解赋值语句 String s = null ？<ul>
+<li>表示未申请任何内存资源，即些语句表示声明了一个引用变量并初始化引用,但是该引用没有指向任何对象.但可以把它作为参数传递或其它使用,但是不能调用它作为对象的方法</li>
+<li>(扩展)：<ul>
+<li>String s ;该语句表示只是声明了一个引用变量,但是并没有初始化引用,所以对变量s的任何操作(除了初始化赋值外) 都将引发异常.</li>
+<li>String s=””; 表示申请了内存资源，但资源空间值为空。该语句表示声明并引用到一个对象,只不过这个对象为0个字节.所以既然有了对象,就可以调用对象的方法<br>注意：”” 也是字符串</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>java语言，变量被分为两大类型：原始值（primitive）和引用值（reference）  </li>
+<li>Integer和int 的区别？  <pre><code>1. java语言中，变量分成两大类型，原始类型，和引用类型，int是java提供的原值数据类型，而Integer是java为int提供的封装类。  
+2. java为所有的原始数据类型提供了封装类。
+</code></pre></li>
+<li>不可变类：指当创建和这个类的实例之后，就不允许修改它的值了。  <pre><code>1. 所有基本类型的包装类（封装类）都是不可变类。  
+2. 不可变类中所有成员变量用private修饰  
+3. 类中没有修改和写成员变量的方法，比如setXXX，只有构造方法，一次生成，不在改变  
+4. 确保类中的所有方法不会被子类覆盖，要将类定义为final或类中方法定义为final  
+</code></pre></li>
+<li>原始数据类型的在传递参数是都是按值传递，包装类型在传递参数时是按引用传递。</li>
+<li>char型变量中能否可以存储一个中文汉字？<strong>可以</strong></li>
+<li>“==”，“equals()”,hashcode()区别？  <pre><code>1. 对于基本数据类型，使用“==”，可以直接比较对应值是否相等；对于引用类型，则是比较引用。  
+2. 不覆盖写equals，结果是和“==”一样比较引用。String类中的equal是比较两个值是否相同。  
+3. equals()是Object类提供的方法之一；hashcode（）方法时从Object类继承来的。  
+4. hashcode()使用用来鉴定两个对象是否相等。  
+5. equals()和hashcode()虽然都是比较对象是否相同，但是有区别。  
+</code></pre><ul>
+<li>equals()是给用户调用的，要比较对象是否相同，必须覆盖重写。  </li>
+<li>hashcode()用户一般不会去调用他，比如在hashmap中。由于key是不可以重复的（equals()和hashcode()一个不等就可以了），它在判断key是否重复时就是判断了hashcode()，而且也用到了equals()方法。并且两个返回值不一样，hashcode是int类型，equal是boolean类型。  </li>
+<li>一般覆盖重写equals()方法同时也是覆盖hashcode()</li>
+</ul>
+</li>
+<li>finally的return？  <pre><code>1. finally的代码在return前执行，  
+2. 如果try-finally和catch-finaly中都有return，那么finally块中的return语句将会覆盖别处的return语句  
+3. 最终返回到调用者那里的是finally中的return语句。  
+</code></pre></li>
+<li>字节流和字符流的主要区别？<pre><code>1. 字节流不会用到缓存，字符流用到了缓存。  
+2. 字节流以字节（8bit）为单位，包含两个抽象类：InputStrea，OutputStream  
+3. 字符流以字符（16bit）为单位，包含两个抽象类：Reader，Writer  
+</code></pre></li>
+<li><p>数据库常用端口号<br> |数据库|MySql|Oracle|SqlServer|MongoDB|<br> |—–:|:—-:|:—–:|:——:|:——-|<br> | 端口号|  3306 |  1521 |  1433 |  27017 |</p>
+</li>
+<li><p>什么是序列化？  </p>
+<pre><code>* 序列化是一种将对象以一连串的字节描述的过程，用于解决在对对象流进行读写操作时所引发的问题。  
+* 序列化可以将对象的状态写在流里进行网络传输，或者保存到文件，数据库等系统里，并在需要的时候把该流读取出来重新构造一个相同的对象。（反序列化）  
+* 序列化可以实现深复制，即可以复制引用的对象。  
+</code></pre></li>
+<li><p>JVM加载class文件的原理机制是什么？  </p>
+<ol>
+<li>类加载主要分成三步：  <ul>
+<li>装载  </li>
+<li>链接  <ol>
+<li>检查  </li>
+<li>准备  </li>
+<li>解析    </li>
+</ol>
+</li>
+<li>初始化  </li>
+</ul>
+</li>
+<li>加载是有类加载器，具体是由ClassLoader和它的子类来实现；类加载器本身也是一个类，其实质就是把类文件从硬盘读取到内存中。  </li>
+<li>类加载方式分为显式和隐式加载：<pre><code>* 隐式加载：程序使用new等方式创建对象，会隐式地调用类的加载器把对应的类加载到jvm中。
+* 显式加载指的是通过直接调用class.forName（）方法把所需的类加载到jvm中。
+</code></pre></li>
+<li><p>java中的类分成3种：系统类、扩展类、和自定义类。对应不同类的加载有3种不同的类加载器：</p>
+<pre><code>* Bootstrap Loader -负责加载系统类（jre/lib/rt.jar的类）
+
+    *         |
+
+        * --ExtClassLoader -负责加载扩展类（jar/lib/ext/*.jar）
+
+            *        |
+
+                * --AppClassLoader -负责加载应用类（classpath指定的目录或jar中的类）
+* Bootstrap Loader 是C++语言实现的，java语言中是看不见的。
+</code></pre></li>
+</ol>
+</li>
+<li>什么是GC？  <ol>
+<li>垃圾回收（garbager collection ，GC）主要完成3项任务  <ul>
+<li>分配内存  </li>
+<li>确保被引用对象的内存不被错误的回收  </li>
+<li>回收不再被引用的对象的内存空间！   </li>
+</ul>
+</li>
+<li>垃圾回收算法  <ul>
+<li>引用计数算法（jvm不用，因为不能解决相互引用的问题）  </li>
+<li>追踪回收算法  </li>
+<li>压缩回收  </li>
+<li>复制回收  </li>
+<li>按代回收  </li>
+</ul>
+</li>
+<li>system.gc（）的相关  <pre><code>1. 开发人员是不能实时地调用垃圾回收期对某个对象或所有对象进行垃圾回收。，但是开发人员却可以通过调用System.gc（）的方法去“通知”垃圾回收器运行，当然，jvm也并不能会保证垃圾回收器马上就会运行。  
+2. System.gc()方法执行会停止所有响应，去检查内存中是否有可以回收的对象，这会对程序的正常运行以及性能造成极大的威胁，因此实际编程时，不推荐频繁使用这一方法。  
+</code></pre></li>
+</ol>
+</li>
+<li>内存泄露？  <pre><code>1. 内存泄露是指的一个不再被程序使用的对象或变量还在内存中占有存储空间（java中主要指的就是这种情况）。  
+2. 引起内存泄露的原因：  
+    1. 静态集合类。比如hashmap和vector容器是静态的，生命周期是和程序一致，容器中的对象在程序结束之前将不能被释放，从而造成了内存泄露。  
+    2. 各种连接  
+    3. 监听器  
+    4. 变量不合理的作用域  
+    5. 单例模式可能会造成内存泄露  
+</code></pre></li>
+<li>java中栈和堆的区别？  <ol>
+<li>java语言中的堆和栈都是内存中存放数据的地方。</li>
+<li>变量分为基本数据类型和引用类型  <ul>
+<li>基本数据类型和以及对象的引用变量，内存分配在栈上。  </li>
+<li>引用类型的变量，内存是分配在堆上或常量池中，需要通过new等方式创建。  </li>
+</ul>
+</li>
+<li>堆内存是用来存放运行时创建的对象，一般来说，通过new关键字创建出来的对象都是存放在堆内存上</li>
+<li>jvm是基于堆栈的虚拟机，每个java程序运行在一个单独的jvm实例上，每一个实例唯一对应一个堆，一个java程序内的多个线程也运行在同一个jvm实例上，因此这些线程会共享堆内存  </li>
+<li>栈和堆的功能以及作用来比较：堆主要存放对象，栈主要用来执行程序  <ul>
+<li>栈的存取速度快，但是栈的大小和生存期必须确定，缺乏一定的灵活性</li>
+<li>堆可以在运行时动态分配内存，生存期不用提前告诉编译器，也导致了存取速度比较缓慢。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
 
       
     </div>
@@ -432,15 +603,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/09/30/java基础面试题系列（1）/" rel="next" title="java基础面试题系列（1）">
+                <i class="fa fa-chevron-left"></i> java基础面试题系列（1）
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/30/java基础面试题系列（1）/" rel="prev" title="java基础面试题系列（1）">
-                java基础面试题系列（1） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -745,9 +916,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://github.com/Mukvin/Mukvin.github.io/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/';
-          this.page.identifier = '2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/';
-          this.page.title = 'JavaWeb开发面试题系列（1）-HTTP中GET与POST的区别';
+          this.page.url = 'https://github.com/Mukvin/Mukvin.github.io/2018/09/30/java基础面试题系列（2）/';
+          this.page.identifier = '2018/09/30/java基础面试题系列（2）/';
+          this.page.title = 'java基础面试题系列（2）';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://mukvin.disqus.com/embed.js';
