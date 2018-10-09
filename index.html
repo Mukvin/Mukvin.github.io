@@ -399,8 +399,7 @@
 
       
         
-          
-            <p><strong>前言</strong><br>&emsp;&emsp;所有的总结都是为了复习，当然，也是作为了一种知识点的积累和回顾。</p>
+          <p><strong>前言</strong><br>&emsp;&emsp;所有的总结都是为了复习，当然，也是作为了一种知识点的积累和回顾。</p>
 <ol>
 <li>接口是不能实例化的，但是可以实例化接口的类的对象。比如 Map m = new hashMap（）。</li>
 <li><p>什么是线程？与进程有什么区别？为什么要使用多线程？</p>
@@ -416,101 +415,14 @@
     2. 与进程相比，线程的创建和切换开销更小。
     3. 多cpu和多核计算机本身就具有执行多线程的能力。
     4. 简化程序结构，使得程序便于理解和维护。
-    &lt;!--more--&gt;
-</code></pre></li>
-<li><p>同步异步的区别</p>
-<pre><code>1. 同步机制保证资源安全。
-
-    1. 实现同步方式：
-
-        1. 利用同步代码块实现同步，
-        2. 实现同步方法实现同步
-2. 异步可以在不希望让程序等待方法返回时，应该使用异步编程，异步能提高程序的效率
-</code></pre></li>
-<li><p>如何实现java多线程？（重要！！！面试宝典P144 ）</p>
-<pre><code>1. 继承Thread类，重写run（）方法
-2. 实现Runnable接口，并且实现该接口的run（）方法
-3. 实现Callable接口，重写Call（）方法。
-
-    * Collable接口实际是属于Executor框架中的功能类，与Runnable接口的功能类似，但是提供了闭Runnable更强大的功能：
-        * Callable可以在人物结束后提供一个返回值，Runnable无法提供这个功能
-        * Callable中的call（）方法可以抛出异常，而Runnable的run（）方法不能抛出异常。
-        * 运行Callable可以拿到一个Future对象，Future对象表示异步计算的结果，他提供检查计算时候完成的方法
-</code></pre></li>
-<li><p>run（）方法和start（）方法的区别？</p>
-<pre><code>1. 通常，系统通过调用线程类的start（）方法来启动一个线程，此时线程处于就绪状态，而非运行状态，也就是意味着了这个线程可以被JVM来调度使用。在调度过程中，JVM通过调用线程类的run（）方法，来完成实际的操作，当run（）方法结束后，此线程就会终止。
-2. start（）方法能够异步调用run（）方法，但是直接调用run（）方法却是同步的，因此无法达到多线程的目的。
-</code></pre></li>
-<li><p>多线程同步的实现方法有哪些？</p>
-<pre><code>1. synchronized关键字
-    *synchronized方法
-    *synchronized块
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  synchronized（syncObject）&#123;</span><br><span class="line">   //访问syncObject的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<pre><code> 2.wait（）方法与notify（）方法    
-在synchronized代码被执行期间，线程可以调用对象的wait（）方法，释放对象锁，进入等待状态，并且可以调用notify（）方法或nitifyAll（）方法通知正在等待的其他线程。    
-</code></pre><p> notify（）唤醒一个线程（等待对了中的第一个线程）并允许它去获得锁，   notifyAll（）方法唤醒所有等待这个对象的线程并允许它们去获得锁（并不是所有唤醒的线程都能获得锁，而是让他们去竞争）。</p>
-<pre><code>3.Lock 方法  
-    1、lock（）。阻塞方式获得锁，获得就返回，如果别的线程持有锁，那就继续等待。    
-    2、tryLock（）。非阻塞方式获得锁，尝试去获得，如果获得就返回true，否则立即返回false     
-    3、tryLock（long timeout，TimeUnit unit）如果获得锁立即返回true，否则等待参数给定的世家单元，在等待过程中，如果获得锁，也返回true，如果等待超时，返回false。     
-    4、lockInterruptibly（），如果获得锁，立即返回，没有获得锁当期线程处于休眠状态。直到获得锁，或者当前线程被别的线程中断。该方法与Lock（）不同的是，Lock没有获得锁会一直处于阻塞状态，且会忽略interrupt（）方法。
-</code></pre></li>
-<li><p>sleep（）与wait（）方法的区别？</p>
-<pre><code>1. 原理不同。
-
-    1. sleep（是Thread类的静态方法，是线程用来控制自身流程的）会是此线程暂停一段时间，把执行机会交给别的线程，等计时时间一到，此线程自动“苏醒”
-    2. wait（）方法时是Object类的方法，用于线程间的通信，这个方法会使得当前的拥有该对象锁的进程等待，知道其他线程调用notify（）或notifyAll（）方法醒过来。
-2. 对锁的处理机制不同。
-
-    1. 调用sleep（）不释放对象锁
-    2. wait（）会释放锁。
-3. 使用区域不同。
-
-    1. wait（）方法必须放在同步控制方法或同步语句块中使用。
-    2. sleep（）方法任何地方都能用。
-</code></pre></li>
-<li><p>sleep（）与yield（）方法的区别？</p>
-<pre><code>1. sleep（）方法给其他线程运行机会时不考虑线程的优先级，所以低优先级的线程也有获得运行的机会。yield（）方法只会给相同的优先级或更高优先级的线程以运行的机会。
-2. 线程执行sleep（）方法后转入阻塞状态，所以在指定的时间内，线程执行了sleep（）方法字符肯定不会被执行的。yield（）方法只是使当前线程重新回到可执行状态，所以执行yield（）方法，有可能在进入到可执行状态后马上又被执行。
-3. sleep（）方法声明抛出InterruptExceptionyield（）方法没有声明任何异常
-4. sleep（）方法比yield（）方法（跟操作系统相关）具有更好的可移植性。
-</code></pre></li>
-<li><p>终止线程的方法有哪些？</p>
-<pre><code>1. stop（）。Thread.stop()来终止线程时，会释放已经锁定的所有监视的资源，可能会导致程序执行的不确定性。
-2. suspend（）。调用suspend（）方法，容易发生死锁。
-</code></pre></li>
-<li><p>synchronized与Lock有什么异同？</p>
-<pre><code>1. 用法不一样：synchronized是托管诶JVM执行的，而Lock的锁定是通过代码实现的。
-2. 性能不一样：JDK5.0中引入的ReetrantLock，如果资源竞争激烈，synchronized性能下降的非常快，而ReetrantLock的性能基本保持不变。
-3. 锁机制不一样。synchronized获得多个锁之后，按照相反的顺序释放，并且是自动释放，不会因为异常导致锁没有释放导致死锁。Lock则需要开发人员手动去释放，并且必须在finally块中是否，否则引起死锁。
-</code></pre></li>
-<li><p>什么是守护线程？</p>
-<pre><code>1. 任何一个守护线程都是整个JVM中所有非守护线程的“保姆”。
-2. 将一个用户线程设置为守护线程的方法：在调用start（）方法之前，调用对象的setDaemon（true）。
-3. 当一个守护线程中产生了其他线程，那么这些新产生的线程默认还是守护线程。用户线程也是如此。
-</code></pre></li>
-<li><p>join（）方法的作用是什么？</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将两个线程合并，用于实现同步功能。</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过jdbc访问数据库步骤？</p>
-<pre><code>1. 加载jdbc驱动器。
-2. 加载jdbc驱动，并将其注册到DriverManager中，一般试用反射Class.forName(String driverName）
-3. 键入数据库连接，取得Connection对象，一般通过DriverManager.getConnection(url,username,passwd)方法实现。
-4. 建立Statement对象或是preparedStatement对象
-5. 执行sql语句
-6. 访问结果集ResultSet对象
-7. 依次将ResultSet,Statement,PreparedStatement,Connection对象关闭，释放掉所占的资源。
-</code></pre></li>
-<li><p>sql中，on和where的区别</p>
-<pre><code>* 在使用left jion时，on和where条件的区别如下：
-* on条件是在生成临时表时使用的条件，它不管on中的条件是否为真，都会返回左边表中的记录。
-* where条件是在临时表生成好后，再对临时表进行过滤的条件。这时已经没有left join的含义（必须返回左边表的记录）了，条件不为真的就全部过滤掉。
-</code></pre></li>
-<li>什么是线程局部变量（thread-local variable）？<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">线程局部变量高效地为每个使用它的线程提供单独的线程局部变量值的副本。</span><br><span class="line">每个线程只能看到与自己相联系的值，而不知道别的线程可能正在使用或修改它们自己的副本。</span><br><span class="line">一些编译器（例如 Microsoft Visual C++ 编译器或 IBM XL FORTRAN 编译器）用存储类别修饰符（像 static 或 volatile ）把对线程局部变量的支持集成到了其语言中。</span><br><span class="line">Java 编译器对线程局部变量不提供特别的语言支持；</span><br><span class="line">相反地，它用 ThreadLocal 类实现这些支持， 核心 Thread 类中有这个类的特别支持。</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-
-          
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/09/java基础面试题系列（3）/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
