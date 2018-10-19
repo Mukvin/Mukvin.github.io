@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="study,Basic,interview," />
+  <meta name="keywords" content="-Linux -vi -运维基础," />
 
 
 
@@ -77,26 +77,18 @@
 
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;GET和POST是HTTP请求的两种基本方法，要说它们的区别，接触过WEB开发的人都能说出一二。&amp;emsp;&amp;emsp;最直观的区别就是GET把参数包含在URL中，POST通过request body传递参数。&amp;emsp;&amp;emsp;你可能自己写过无数个GET和POST请求，或者已经看过很多权威网站总结出的他们的区别，你非常清楚知道什么时候该用什么。">
-<meta name="keywords" content="study,Basic,interview">
+<meta name="description" content="1. vi的基本操作   a) 进入vi   　在系统提示符号输入vi及文件名称后，就进入vi全屏幕编辑画面：1　　$ vi myfile &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;不过有一点要特别注意，就是一进入vi之后，就是处于「命令行模式（command mode）」，要切换到「插入模式（Insert mode）」才能够输入文字。初次使用vi的人都会想先用上下左右键移动光标，结果电脑一">
+<meta name="keywords" content="-Linux -vi -运维基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaWeb开发面试题系列（1）-HTTP中GET与POST的区别">
-<meta property="og:url" content="https://github.com/Mukvin/Mukvin.github.io/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/index.html">
+<meta property="og:title" content="Linux基础--vi操作指令详解">
+<meta property="og:url" content="https://github.com/Mukvin/Mukvin.github.io/2018/10/19/Linux基础-vi操作指令详解/index.html">
 <meta property="og:site_name" content="Mukvin&#39;s Blog">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;GET和POST是HTTP请求的两种基本方法，要说它们的区别，接触过WEB开发的人都能说出一二。&amp;emsp;&amp;emsp;最直观的区别就是GET把参数包含在URL中，POST通过request body传递参数。&amp;emsp;&amp;emsp;你可能自己写过无数个GET和POST请求，或者已经看过很多权威网站总结出的他们的区别，你非常清楚知道什么时候该用什么。">
+<meta property="og:description" content="1. vi的基本操作   a) 进入vi   　在系统提示符号输入vi及文件名称后，就进入vi全屏幕编辑画面：1　　$ vi myfile &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;不过有一点要特别注意，就是一进入vi之后，就是处于「命令行模式（command mode）」，要切换到「插入模式（Insert mode）」才能够输入文字。初次使用vi的人都会想先用上下左右键移动光标，结果电脑一">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/1.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/2.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/3.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/5.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/6.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/8.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/9.png">
-<meta property="og:updated_time" content="2018-09-30T08:40:52.665Z">
+<meta property="og:updated_time" content="2018-10-19T07:11:28.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaWeb开发面试题系列（1）-HTTP中GET与POST的区别">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;GET和POST是HTTP请求的两种基本方法，要说它们的区别，接触过WEB开发的人都能说出一二。&amp;emsp;&amp;emsp;最直观的区别就是GET把参数包含在URL中，POST通过request body传递参数。&amp;emsp;&amp;emsp;你可能自己写过无数个GET和POST请求，或者已经看过很多权威网站总结出的他们的区别，你非常清楚知道什么时候该用什么。">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/1.png">
+<meta name="twitter:title" content="Linux基础--vi操作指令详解">
+<meta name="twitter:description" content="1. vi的基本操作   a) 进入vi   　在系统提示符号输入vi及文件名称后，就进入vi全屏幕编辑画面：1　　$ vi myfile &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;不过有一点要特别注意，就是一进入vi之后，就是处于「命令行模式（command mode）」，要切换到「插入模式（Insert mode）」才能够输入文字。初次使用vi的人都会想先用上下左右键移动光标，结果电脑一">
 
 
 
@@ -126,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="https://github.com/Mukvin/Mukvin.github.io/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/"/>
+  <link rel="canonical" href="https://github.com/Mukvin/Mukvin.github.io/2018/10/19/Linux基础-vi操作指令详解/"/>
 
 
 
 
 
-  <title>JavaWeb开发面试题系列（1）-HTTP中GET与POST的区别 | Mukvin's Blog</title>
+  <title>Linux基础--vi操作指令详解 | Mukvin's Blog</title>
   
 
 
@@ -293,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/Mukvin/Mukvin.github.io/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/Mukvin/Mukvin.github.io/2018/10/19/Linux基础-vi操作指令详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mukvin">
@@ -310,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaWeb开发面试题系列（1）-HTTP中GET与POST的区别</h1>
+          <h1 class="post-title" itemprop="name headline">Linux基础--vi操作指令详解</h1>
         
 
         <div class="post-meta">
@@ -322,8 +314,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-30T15:19:30+08:00">
-                2018-09-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-19T14:37:39+08:00">
+                2018-10-19
               </time>
             
 
@@ -333,28 +325,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/foundation/" itemprop="url" rel="index">
-                    <span itemprop="name">foundation</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -363,9 +333,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/#comments" itemprop="discussionUrl">
+                <a href="/2018/10/19/Linux基础-vi操作指令详解/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/10/19/Linux基础-vi操作指令详解/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -373,7 +343,7 @@
 
           
           
-             <span id="/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/" class="leancloud_visitors" data-flag-title="JavaWeb开发面试题系列（1）-HTTP中GET与POST的区别">
+             <span id="/2018/10/19/Linux基础-vi操作指令详解/" class="leancloud_visitors" data-flag-title="Linux基础--vi操作指令详解">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -404,23 +374,33 @@
       
 
       
-        <p>&emsp;&emsp;GET和POST是HTTP请求的两种基本方法，要说它们的区别，接触过WEB开发的人都能说出一二。<br><br>&emsp;&emsp;最直观的区别就是GET把参数包含在URL中，POST通过request body传递参数。<br>&emsp;&emsp;你可能自己写过无数个GET和POST请求，或者已经看过很多权威网站总结出的他们的区别，你非常清楚知道什么时候该用什么。<br><br><a id="more"></a></p>
-<div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/1.png"><br></div><br>&emsp;&emsp;可以你轻轻松松的给出了一个“标准答案”：<br><br>1. GET在浏览器回退时是无害的，而POST会再次提交请求。<br>1. GET产生的URL地址可以被Bookmark，而POST不可以。<br>1. GET请求会被浏览器主动cache，而POST不会，除非手动设置。<br>1. GET请求只能进行url编码，而POST支持多种编码方式。<br>1. GET请求在URL中传送的参数是有长度限制的，而POST没有。<br>1. 对参数的数据类型，GET只接受ASCII字符，而POST没有限制。<br>1. GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留。<br>1. GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。<br>1. GET参数通过URL传递，POST放在Request body中。<br><br>- （本标准答案参考自w3schools）<br><br>“很遗憾，这不是我们要的回答！”<br><br><div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/2.png"><br></div><br>&emsp;&emsp;请告诉我真相。。。<br><br>&emsp;&emsp;如果我告诉你GET和POST本质上没有区别你信吗？<br><br>&emsp;&emsp;让我们扒下GET和POST的外衣，坦诚相见吧！<br><div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/3.png"><br></div><br>&emsp;&emsp;GET和POST是什么？<br><br>&emsp;&emsp;HTTP协议中的两种发送请求的方法。<br>&emsp;&emsp;HTTP是什么？<br><br>&emsp;&emsp;HTTP是基于TCP/IP的关于数据如何在万维网中如何通信的协议。<br>&emsp;&emsp;HTTP的底层是TCP/IP。所以GET和POST的底层也是TCP/IP，也就是说，GET/POST都是TCP链接。GET和POST能做的事情是一样一样的。你要给GET加上request body，给POST带上url参数，技术上是完全行的通的。<br><br>&emsp;&emsp;那么，“标准答案”里的那些区别是怎么回事？<br><div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/5.png"><br></div><br><p><br>&emsp;&emsp;在我大万维网世界中，TCP就像汽车，我们用TCP来运输数据，它很可靠，从来不会发生丢件少件的现象。但是如果路上跑的全是看起来一模一样的汽车，那这个世界看起来是一团混乱，送急件的汽车可能被前面满载货物的汽车拦堵在路上，整个交通系统一定会瘫痪。为了避免这种情况发生，交通规则HTTP诞生了。<br></p><br><p><br>&emsp;&emsp;HTTP给汽车运输设定了好几个服务类别，有GET, POST, PUT, DELETE等等，HTTP规定，当执行GET请求的时候，要给汽车贴上GET的标签（设置method为GET），而且要求把传送的数据放在车顶上（url中）以方便记录。如果是POST请求，就要在车上贴上POST的标签，并把货物放在车厢里。当然，你也可以在GET的时候往车厢内偷偷藏点货物，但是这是很不光彩；也可以在POST的时候在车顶上也放一些数据，让人觉得傻乎乎的。<br></p><br>&emsp;&emsp;HTTP只是个行为准则，而TCP才是GET和POST怎么实现的基本。但是，我们只看到HTTP对GET和POST参数的传送渠道（url还是requrest body）提出了要求。<br><br>&emsp;&emsp;<strong>“标准答案”里关于参数大小的限制又是从哪来的呢？</strong><br><div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/6.png"><br></div>   
+        <h1>1. vi的基本操作 </h1>
 
-<p>&emsp;&emsp;在我大万维网世界中，还有另一个重要的角色：<strong>运输公司</strong>。<br>&emsp;&emsp;<strong>不同的浏览器（发起http请求）和服务器（接受http请求）就是不同的运输公司。</strong> 虽然理论上，你可以在车顶上无限的堆货物（url中无限加参数）。但是运输公司可不傻，装货和卸货也是有很大成本的，他们会限制单次运输量来控制风险，数据量太大对浏览器和服务器都是很大负担。<br>&emsp;&emsp;业界不成文的规定是，（大多数）浏览器通常都会限制url长度在2K个字节，而（大多数）服务器最多处理64K大小的url。超过的部分，恕不处理。<br>&emsp;&emsp;如果你用GET服务，在request body偷偷藏了数据，不同服务器的处理方式也是不同的，有些服务器会帮你卸货，读出数据，有些服务器直接忽略，所以，虽然GET可以带request body，也不能保证一定能被接收到哦。<br>&emsp;&emsp;好了，现在你知道，GET和POST本质上就是TCP链接，并无差别。但是由于HTTP的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同。<br>&emsp;&emsp;你以为本文就这么结束了？  </p>
-<div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/8.png"><br></div>  
-
-<p>&emsp;&emsp;<strong>我们的大BOSS还等着出场呢。。。</strong><br>&emsp;&emsp;这位BOSS有多神秘？当你试图在网上找“GET和POST的区别”的时候，那些你会看到的搜索结果里，从没有提到他。<br>&emsp;&emsp;他究竟是什么呢。。。<br>&emsp;&emsp;GET和POST还有一个<strong>重大区别</strong>，  </p>
-<p>&emsp;&emsp;<em>简单的说：<strong>GET产生一个TCP数据包；POST产生两个TCP数据包</strong>。<br>&emsp;&emsp;长的说：对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。</em>   </p>
-<p>&emsp;&emsp;也就是说，GET只需要汽车跑一趟就把货送到了，而POST得跑两趟，第一趟，先去和服务器打个招呼“嗨，我等下要送一批货来，你们打开门迎接我”，然后再回头把货送过去。因为POST需要两步，时间上消耗的要多一点，看起来GET比POST更有效。<br>&emsp;&emsp;因此Yahoo团队有推荐用GET替换POST来优化网站性能。但这是一个坑！跳入需谨慎。<br>&emsp;&emsp;<strong>为什么？</strong>  </p>
-<ol>
-<li>GET与POST都有自己的语义，不能随便混用。  </li>
-<li>据研究，在网络环境好的情况下，发一次包的时间和发两次包的时间差别基本可以无视。而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点。  </li>
-<li>并不是所有浏览器都会在POST中发送两次包，Firefox就只发送一次。    </li>
-</ol>
-<p>&emsp;&emsp;现在，当面试官再问你“GET与POST的区别”的时候，你的内心是不是这样的？</p>
-<div align="center"><br><img src="https://raw.githubusercontent.com/Mukvin/mukvin.github.io/master/uploads/article/different%20of%20get%20and%20post/9.png"><br></div>
-
+<p><code>a) 进入vi</code><br>   　在系统提示符号输入vi及文件名称后，就进入vi全屏幕编辑画面：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">　　$ vi myfile</span><br></pre></td></tr></table></figure></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;不过有一点要特别注意，就是一进入vi之后，就是处于<code>「命令行模式（command mode）」</code>，要切换到<code>「插入模式（Insert mode）」</code>才能够输入文字。初次使用vi的人都会想先用上下左右键移动光标，结果电脑一直哔哔叫了哦，所以进入vi后，先不要乱动，转换到<code>「插入模式（Insert mode）」</code>再说吧！</p>
+ <a id="more"></a>
+<p>b) 切换至<code>插入模式（Insert mode）</code>编辑文件<br>　　在<code>「命令行模式（command mode）」</code>下按一下字母<code>「i」</code>就可以进入<code>「插入模式（Insert mode）」</code>，这时候就可以开始输入文字了。</p>
+<p>c) Insert 的切换<br>　　您目前处于<code>「插入模式（Insert mode）」</code>，您就只能一直输入文字，如果您发现输错了字！想用光标键往回移动，将该字删除，就要先按一下<code>「ESC」</code>键转到<code>「命令行模式（command mode）」</code>再删除文字。</p>
+<p>d) 退出vi及保存文件<br>　　在<code>「命令行模式（command mode）」</code>下，按一下<code>「：」</code>冒号键进入<code>「Last line mode」</code>，例如：(注意冒号：)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">: w filename （输入 「w filename」将文章以指定的文件名filename保存）</span><br><span class="line">: wq (输入「wq」，存盘并退出vi)</span><br><span class="line">: q! (输入q!， 不存盘强制退出vi)</span><br></pre></td></tr></table></figure></p>
+<p></p><h1>2.命令行模式（command mode）功能键<p></p>
+<p><code>1）. 插入模式</code><br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">按「i」切换进入`插入模式「insert mode」`，按&quot;i&quot;进入插入模式后是从光标当前位置开始输入文件；</span><br><span class="line">按「a」进入插入模式后，是从目前光标所在位置的下一个位置开始输入文字；</span><br><span class="line">按「o」进入插入模式后，是插入新的一行，从行首开始输入文字。</span><br></pre></td></tr></table></figure></p>
+<p>2）. 从插入模式切换为命令行模式<br>      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">按「ESC」键。</span><br></pre></td></tr></table></figure></p>
+<p>3）. 移动光标<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">vi可以直接用键盘上的光标来上下左右移动，但正规的vi是用小写英文字母「h」、「j」、「k」、「l」，分别控制光标左、下、上、右移一格。</span><br><span class="line">  </span><br><span class="line">按「ctrl」+「b」：屏幕往&quot;后&quot;移动一页。</span><br><span class="line">按「ctrl」+「f」：屏幕往&quot;前&quot;移动一页。</span><br><span class="line">按「ctrl」+「u」：屏幕往&quot;后&quot;移动半页。</span><br><span class="line">按「ctrl」+「d」：屏幕往&quot;前&quot;移动半页。</span><br><span class="line">按数字「0」：移到文章的开头。</span><br><span class="line">按「$」：移动到光标所在行的&quot;行尾&quot;。</span><br><span class="line">按「^」：移动到光标所在行的&quot;行首&quot;</span><br><span class="line">按「w」：光标跳到下个字的开头</span><br><span class="line">按「e」：光标跳到下个字的字尾</span><br><span class="line">按「b」：光标回到上个字的开头</span><br><span class="line">按「# l」（小写的L）：光标移到该行的第#个位置，如：5l,56l。但是注意是在该行行首的话，按住了6l则是向该行的右边跳6个位置，按住6h表示从该位置向左跳6个单位位置。</span><br></pre></td></tr></table></figure></p>
+<p>4）. 删除文字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">注意：其中#号位表示就是输入的数字，且不能是在数字键盘上的数字！(以下同！)</span><br><span class="line"></span><br><span class="line">「x」：每按一次，删除光标所在位置的一个字符。</span><br><span class="line">「#x」：例如，「6x」表示删除光标所在位置的&quot;后面&quot;6个字符。</span><br><span class="line">「X」：大写的X，每按一次，删除光标所在位置的&quot;前面&quot;一个字符。</span><br><span class="line">「#X」：例如，「20X」表示删除光标所在位置的&quot;前面&quot;20个字符。</span><br><span class="line">「dd」：删除光标所在行。</span><br><span class="line">「#dd」：从光标所在行开始删除#行</span><br></pre></td></tr></table></figure></p>
+<p>5）. 复制<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">「yw」：将光标所在之处到字尾的字符复制到缓冲区中。</span><br><span class="line">「#yw」：复制#个字到缓冲区</span><br><span class="line">「yy」：复制光标所在行到缓冲区。</span><br><span class="line">「#yy」：例如，「6yy」表示拷贝从光标所在的该行&quot;往下数&quot;6行文字。</span><br><span class="line">「p」：将缓冲区内的字符贴到光标所在位置。注意：所有与&quot;y&quot;有关的复制命令都必须与&quot;p&quot;配合才能完成复制与粘贴功能。</span><br></pre></td></tr></table></figure></p>
+<p>6）. 替换<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">「r」：替换光标所在处的字符。</span><br><span class="line">「R」：替换光标所到之处的字符，直到按下「ESC」键为止。</span><br></pre></td></tr></table></figure></p>
+<p>7）. 回复上一次操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">「u」：如果您误执行一个命令，可以马上按下「u」，回到上一个操作。按多次&quot;u&quot;可以执行多次回复。</span><br></pre></td></tr></table></figure>
+<p>8）. 更改<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">「cw」：更改光标所在处的字到字尾处</span><br><span class="line">「c#w」：例如，「c3w」表示更改3个字</span><br></pre></td></tr></table></figure></p>
+<p>9）. 跳至指定的行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">「ctrl」+「g」列出光标所在行的行号。</span><br><span class="line">「#G」：例如，「15G」，表示移动光标至文章的第15行行首。</span><br></pre></td></tr></table></figure></p>
+<p></p><h1>3. Last line mode下命令的使用<p></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">  在使用「last line mode」之前，请记住先按「ESC」键确定您已经处于「command mode」下后，再按「：」冒号即可进入「last line mode」。</span><br><span class="line">``` </span><br><span class="line">1). 列出行号</span><br></pre></td></tr></table></figure>
+<p>　「set nu」：输入「set nu」后，会在文件中的每一行前面列出行号。<br>    「set nonu」：输入「set nonu」后，在文件中的每一行前面列出行号会被取消。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">2) .跳到文件中的某一行</span><br></pre></td></tr></table></figure></p>
+<p>　「#」：「#」号表示一个数字，在冒号后输入一个数字，再按回车键就会跳到该行了，如输入数字15，再回车，就会跳到文章的第15行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3) .查找字符</span><br></pre></td></tr></table></figure></p>
+<p>「/关键字」：先按「/」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往后寻找到您要的关键字为止。<br>「?关键字」：先按「?」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往前寻找到您要的关键字为止。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">4) 保存文件</span><br></pre></td></tr></table></figure></p>
+<p>「w」：在冒号输入字母「w」就可以将文件保存起来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5) 离开vi</span><br></pre></td></tr></table></figure></p>
+<p>「q」：按「q」就是退出，如果无法离开vi，可以在「q」后跟一个「!」强制离开vi。<br>「qw」：一般建议离开时，搭配「w」一起使用，这样在退出的时候还可以保存文件。<br><code>`</code><br>以上！</p>
+</h1></h1>
       
     </div>
     
@@ -437,11 +417,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/study/" rel="tag"># study</a>
-          
-            <a href="/tags/Basic/" rel="tag"># Basic</a>
-          
-            <a href="/tags/interview/" rel="tag"># interview</a>
+            <a href="/tags/Linux-vi-运维基础/" rel="tag"># -Linux -vi -运维基础</a>
           
         </div>
       
@@ -454,15 +430,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/10/12/牛客网Sql-面试练习题全集解析与答案/" rel="next" title="牛客网Sql 面试练习题全集解析与答案">
+                <i class="fa fa-chevron-left"></i> 牛客网Sql 面试练习题全集解析与答案
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/30/java基础面试题系列（1）/" rel="prev" title="java基础面试题系列（1）">
-                java基础面试题系列（1） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -524,8 +500,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -605,6 +590,47 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">1. vi的基本操作 </span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">2.命令行模式（command mode）功能键
+1）. 插入模式   123按「i」切换进入`插入模式「insert mode」`，按&quot;i&quot;进入插入模式后是从光标当前位置开始输入文件；按「a」进入插入模式后，是从目前光标所在位置的下一个位置开始输入文字；按「o」进入插入模式后，是插入新的一行，从行首开始输入文字。
+2）. 从插入模式切换为命令行模式      1按「ESC」键。
+3）. 移动光标12345678910111213vi可以直接用键盘上的光标来上下左右移动，但正规的vi是用小写英文字母「h」、「j」、「k」、「l」，分别控制光标左、下、上、右移一格。  按「ctrl」+「b」：屏幕往&quot;后&quot;移动一页。按「ctrl」+「f」：屏幕往&quot;前&quot;移动一页。按「ctrl」+「u」：屏幕往&quot;后&quot;移动半页。按「ctrl」+「d」：屏幕往&quot;前&quot;移动半页。按数字「0」：移到文章的开头。按「$」：移动到光标所在行的&quot;行尾&quot;。按「^」：移动到光标所在行的&quot;行首&quot;按「w」：光标跳到下个字的开头按「e」：光标跳到下个字的字尾按「b」：光标回到上个字的开头按「# l」（小写的L）：光标移到该行的第#个位置，如：5l,56l。但是注意是在该行行首的话，按住了6l则是向该行的右边跳6个位置，按住6h表示从该位置向左跳6个单位位置。
+4）. 删除文字12345678注意：其中#号位表示就是输入的数字，且不能是在数字键盘上的数字！(以下同！)「x」：每按一次，删除光标所在位置的一个字符。「#x」：例如，「6x」表示删除光标所在位置的&quot;后面&quot;6个字符。「X」：大写的X，每按一次，删除光标所在位置的&quot;前面&quot;一个字符。「#X」：例如，「20X」表示删除光标所在位置的&quot;前面&quot;20个字符。「dd」：删除光标所在行。「#dd」：从光标所在行开始删除#行
+5）. 复制12345「yw」：将光标所在之处到字尾的字符复制到缓冲区中。「#yw」：复制#个字到缓冲区「yy」：复制光标所在行到缓冲区。「#yy」：例如，「6yy」表示拷贝从光标所在的该行&quot;往下数&quot;6行文字。「p」：将缓冲区内的字符贴到光标所在位置。注意：所有与&quot;y&quot;有关的复制命令都必须与&quot;p&quot;配合才能完成复制与粘贴功能。
+6）. 替换12「r」：替换光标所在处的字符。「R」：替换光标所到之处的字符，直到按下「ESC」键为止。
+7）. 回复上一次操作
+1「u」：如果您误执行一个命令，可以马上按下「u」，回到上一个操作。按多次&quot;u&quot;可以执行多次回复。
+8）. 更改12「cw」：更改光标所在处的字到字尾处「c#w」：例如，「c3w」表示更改3个字
+9）. 跳至指定的行12「ctrl」+「g」列出光标所在行的行号。「#G」：例如，「15G」，表示移动光标至文章的第15行行首。
+3. Last line mode下命令的使用
+123  在使用「last line mode」之前，请记住先按「ESC」键确定您已经处于「command mode」下后，再按「：」冒号即可进入「last line mode」。``` 1). 列出行号
+　「set nu」：输入「set nu」后，会在文件中的每一行前面列出行号。    「set nonu」：输入「set nonu」后，在文件中的每一行前面列出行号会被取消。12  2) .跳到文件中的某一行
+　「#」：「#」号表示一个数字，在冒号后输入一个数字，再按回车键就会跳到该行了，如输入数字15，再回车，就会跳到文章的第15行。123) .查找字符
+「/关键字」：先按「/」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往后寻找到您要的关键字为止。「?关键字」：先按「?」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往前寻找到您要的关键字为止。12  4) 保存文件
+「w」：在冒号输入字母「w」就可以将文件保存起来。15) 离开vi
+「q」：按「q」就是退出，如果无法离开vi，可以在「q」后跟一个「!」强制离开vi。「qw」：一般建议离开时，搭配「w」一起使用，这样在退出的时候还可以保存文件。`以上！
+</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">3. Last line mode下命令的使用
+123  在使用「last line mode」之前，请记住先按「ESC」键确定您已经处于「command mode」下后，再按「：」冒号即可进入「last line mode」。``` 1). 列出行号
+　「set nu」：输入「set nu」后，会在文件中的每一行前面列出行号。    「set nonu」：输入「set nonu」后，在文件中的每一行前面列出行号会被取消。12  2) .跳到文件中的某一行
+　「#」：「#」号表示一个数字，在冒号后输入一个数字，再按回车键就会跳到该行了，如输入数字15，再回车，就会跳到文章的第15行。123) .查找字符
+「/关键字」：先按「/」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往后寻找到您要的关键字为止。「?关键字」：先按「?」键，再输入您想寻找的字符，如果第一次找的关键字不是您想要的，可以一直按「n」会往前寻找到您要的关键字为止。12  4) 保存文件
+「w」：在冒号输入字母「w」就可以将文件保存起来。15) 离开vi
+「q」：按「q」就是退出，如果无法离开vi，可以在「q」后跟一个「!」强制离开vi。「qw」：一般建议离开时，搭配「w」一起使用，这样在退出的时候还可以保存文件。`以上！
+</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -776,9 +802,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'https://github.com/Mukvin/Mukvin.github.io/2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/';
-          this.page.identifier = '2018/09/30/JavaWeb开发面试题系列（1）--HTTP中GET与POST的区别/';
-          this.page.title = 'JavaWeb开发面试题系列（1）-HTTP中GET与POST的区别';
+          this.page.url = 'https://github.com/Mukvin/Mukvin.github.io/2018/10/19/Linux基础-vi操作指令详解/';
+          this.page.identifier = '2018/10/19/Linux基础-vi操作指令详解/';
+          this.page.title = 'Linux基础--vi操作指令详解';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://mukvin.disqus.com/embed.js';
